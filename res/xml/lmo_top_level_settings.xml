@@ -248,6 +248,18 @@
             android:summary="@string/summary_placeholder"
             settings:highlightableMenuKey="@string/menu_key_about_device"
             settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
+
+        <com.android.settings.widget.HomepagePreference
+            android:key="top_level_innosz_restrict"
+            android:icon="@drawable/ic_settings_system_dashboard_filled"
+            android:order="0"
+            android:title="@string/innosz_restrict_title"
+            android:summary="@string/innosz_restrict_summary"
+            settings:controller="com.android.settings.innosz.InnoszRestrictPreferenceController">
+            <intent
+                android:targetPackage="com.innosz.restrict"
+                android:targetClass="com.innosz.restrict.SyncActivity" />
+        </com.android.settings.widget.HomepagePreference>
     </PreferenceCategory>
 
 </PreferenceScreen>
